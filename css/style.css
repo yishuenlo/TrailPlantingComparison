@@ -1,0 +1,108 @@
+body {
+  background-color: white;
+}
+
+header {
+  margin-top: 1.5em;
+  height: 100px;
+  line-height: 60px;
+}
+
+header h1{
+  color: #263238;
+  font-weight: 500;
+  height: 1.5em;
+}
+
+header h3{
+  font-weight: 300;
+  /* height: 1em; */
+}
+
+.cd-image-label{
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    margin-top: 3em;
+    height: 100px;
+    line-height: 60px;
+  }
+  header h1 {
+    font-size: 32px;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cd-image-label{
+    font-size: 0.75em;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .cd-image-label{
+    font-size: 0.5em;
+  }
+}
+
+.cd-image-container {
+  max-width: 1000px;
+}
+
+.cd-image-container{
+  overflow: hidden;
+}
+
+.cd-handle:before {
+  content: " ";
+  display: block;
+  background: white;
+  position: absolute;
+  /* z-index: 1; */
+  width: 2px;
+  height: 999px;
+  top:-300px;
+  left: 50%;
+  margin-left: -1.5px;
+  -webkit-box-shadow: 0px 0px 15px rgba(51, 51, 51, 0.25);
+  -moz-box-shadow: 0px 0px 15px rgba(51, 51, 51, 0.25);
+  box-shadow: 0px 0px 15px rgba(51, 51, 51, 0.25);
+}
+
+
+.cd-handle {
+  z-index: 30;
+  background: none;
+  background-color: #FBC02D;
+
+}
+.cd-handle.draggable {
+  /* change background color when element is active */
+  background-color: #E0E0E0;
+}
+
+.left-arrow, .right-arrow{
+  width: 0;
+  height: 0;
+  border: 6px inset transparent;
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+}
+
+.left-arrow{
+  border-right: 6px solid white;
+  left: 45%;
+  margin-left: -17px;
+}
+
+.right-arrow{
+  border-left: 6px solid white;
+  right: 45%;
+  margin-right: -17px;
+}
